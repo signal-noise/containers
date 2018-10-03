@@ -1,4 +1,4 @@
-FROM signal-noise/circleci:8.12.0
+FROM signalnoise/circleci:8.12.0
 
 # Add GCloud SDK
 ENV CLOUD_SDK_VERSION 219.0.1
