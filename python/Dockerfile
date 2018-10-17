@@ -1,4 +1,4 @@
-FROM signalnoise/circleci:8.12.0
+FROM signalnoise/circleci:6.2.0
 
 # install node the way https://hub.docker.com/_/python:3.4-alpine does it
 # ensure local python is preferred over distribution python
