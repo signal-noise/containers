@@ -5,7 +5,7 @@ RUN apk add --no-cache bash git openssh tar gzip ca-certificates
 
 # install node the way https://hub.docker.com/_/node:8-alpine does it
 
-ENV NODE_VERSION 8.1.4
+ENV NODE_VERSION 8.12.0
 
 RUN addgroup -g 1000 node \
   && adduser -u 1000 -G node -s /bin/sh -D node \
