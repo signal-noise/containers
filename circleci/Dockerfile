@@ -1,4 +1,4 @@
-FROM node:8.12.0-alpine
+FROM node:62.0-alpine
 
 # Packages for CircleCi compatibility
 RUN apk add --no-cache bash git openssh tar gzip ca-certificates
