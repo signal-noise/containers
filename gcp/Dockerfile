@@ -1,7 +1,7 @@
-FROM signalnoise/circleci:6.14
+FROM signalnoise/circleci:10.12
 
 # Add GCloud SDK
-ENV CLOUD_SDK_VERSION 219.0.1
+ENV CLOUD_SDK_VERSION 220.0.0
 ENV PATH /google-cloud-sdk/bin:$PATH
 RUN apk --no-cache add \
   curl \
