@@ -2,9 +2,6 @@ FROM signalnoise/circleci:6.14
 
 # install node the way https://hub.docker.com/_/python:2-alpine does it
 # ensure local python is preferred over distribution python
-FROM alpine:3.8
-
-# ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 
 # http://bugs.python.org/issue19846
