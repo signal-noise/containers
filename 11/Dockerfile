@@ -1,6 +1,6 @@
-FROM node:10.12-alpine
+FROM node:11-alpine
 
-ENV CLOUD_SDK_VERSION 220.0.0
+ENV CLOUD_SDK_VERSION 237.0.0
 
 # Packages for Signal Noise workflows
 RUN apk add --no-cache vim tar gzip jq curl

@@ -1,4 +1,4 @@
-FROM node:10.13-alpine
+FROM node:8-alpine
 
 ENV CLOUD_SDK_VERSION 220.0.0
 
