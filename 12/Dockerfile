@@ -1,6 +1,6 @@
 FROM node:12-alpine
 
-ARG GOOGLE_CLOUD_SDK_VERSION 291.0.0
+ARG GOOGLE_CLOUD_SDK_VERSION=291.0.0
 ARG GHR_VERSION=v0.13.0
 
 # Packages for Signal Noise workflows
