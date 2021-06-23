@@ -10,4 +10,6 @@ Different top level folders on this repo represent different Docker Hub 'Reposit
 while folders represent version numbers, exposed as tags within the docker repo system. 
 Branches and tags in Git / Github are not used.
 
-Note that the `base` container repo/folder is built on the official *NodeJS* container.
+Note that the `base` container repo/folder is built on the official *NodeJS* container. 
+The `e2e` container is also based on Node but contains extra tooling for automated 
+accessiblity and e2e testing.

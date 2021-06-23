@@ -1,7 +1,7 @@
 FROM node:14-alpine
 
-ARG GOOGLE_CLOUD_SDK_VERSION=291.0.0
-ARG GHR_VERSION=v0.13.0
+ARG GOOGLE_CLOUD_SDK_VERSION=346.0.0
+ARG GHR_VERSION=v0.14.0
 
 # Packages for Signal Noise workflows
 RUN apk add --no-cache vim tar gzip jq curl
@@ -39,24 +39,5 @@ RUN \
   chown root:root /usr/local/bin/ghr && \
   # Remove the download context directory
   rm -rf /tmp/ghr_download
-
-# Things for accesibility and end-to-end testing stuff
-RUN apk add \
-      chromium \
-      freetype \
-      harfbuzz \
-      nss \
-      ttf-freefont \
-    && ln -s /usr/bin/chromium-browser /usr/bin/chromium \
-    && rm -rf /var/cache/apk/*
-
-# Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
-
-RUN	npm install -g \
-        pa11y-ci \
-        depcheck \
-        --unsafe-perm \
-    && npm cache clean --force
 
 VOLUME ["/root/.config"]

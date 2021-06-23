@@ -1,7 +1,7 @@
 FROM node:16-alpine
 
 ARG GOOGLE_CLOUD_SDK_VERSION=346.0.0
-ARG GHR_VERSION=v1.7.0
+ARG GHR_VERSION=v0.14.0
 
 # Packages for Signal Noise workflows
 RUN apk add --no-cache vim tar gzip jq curl
@@ -10,7 +10,7 @@ RUN apk add --no-cache vim tar gzip jq curl
 RUN apk add --no-cache bash git openssh ca-certificates
 
 # Packages as install helpers for the SDKs
-RUN apk add --no-cache python py-crcmod py-pip libc6-compat openssh-client
+RUN apk add --no-cache python3 py-crcmod py-pip libc6-compat openssh-client
 
 # Add GCloud SDK
 ENV PATH /google-cloud-sdk/bin:$PATH
@@ -39,5 +39,3 @@ RUN \
     chown root:root /usr/local/bin/ghr && \
     # Remove the download context directory
     rm -rf /tmp/ghr_download
-
-# Things for accesibility and end-to-end testing stuff
