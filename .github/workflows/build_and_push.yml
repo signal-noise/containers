@@ -2,8 +2,8 @@ name: Docker build and push to GCR repo
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
 
 jobs:
   build_and_push:
